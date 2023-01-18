@@ -1,0 +1,20 @@
+package io;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Boj11022 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+        int count = Integer.parseInt(bf.readLine());
+        for (int i = 1; i <= count; i++) {
+            String str = bf.readLine();
+            int A = str.charAt(0) - '0';
+            int B = str.charAt(2) - '0';
+            sb.append("Case #"+i+": "+A+" + "+B+" = ").append(A + B).append("\n");
+        }
+        System.out.println(sb);
+    }
+}
